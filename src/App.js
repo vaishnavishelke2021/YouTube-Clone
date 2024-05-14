@@ -1,9 +1,12 @@
 import './App.css';
+import Head from './Components/Head';
+import Body from './Components/Body';
 
 function App() {
   return (
     <div>
-      <h1 className='bg-red-500 text-3xl'>VTube</h1>
+     <Head/>
+     <Body/>
     </div>
   );
 }
