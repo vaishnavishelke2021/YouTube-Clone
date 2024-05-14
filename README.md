@@ -72,10 +72,14 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/t
 
 <!--
 
+> for tailwind
 npm i -D tailwindcss
 
+> for redux store
 npm i @reduxjs/toolkit 
 npm i react-redux
 
+> for routing
+npm i react-router-dom
 
 -->
