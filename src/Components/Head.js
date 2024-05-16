@@ -10,6 +10,7 @@ import { YOUTUBE_SEARCH_API } from "../utils/constants";
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
   const [searchSuggestion, setSearchSuggestion] = useState([]);
+  const [showSuggestions, setShowSuggestions] = useState(false);
   console.log(searchQuery);
 
   useEffect(() => {
@@ -58,6 +59,8 @@ const Head = () => {
             className="w-[40%] border border-gray-300 py-1 px-4 rounded-l-full relative"
             value={searchQuery}
             onChange={(e) => setSearchQuery(e.target.value)}
+            onFocus={() => setShowSuggestions(true)}
+            onBlur={() => setShowSuggestions(false)}
           />
           <button className="bg-gray-100 border border-gray-300 rounded-r-full py-2 px-5">
             {search}
@@ -66,18 +69,20 @@ const Head = () => {
             <img className="h-8 ml-4" src={mic} alt="" />
           </button>
         </div>
-        <div className="fixed ml-[16.6rem] w-[27.3%]">
-          <ul className="rounded-lg shadow-xl border-gray-300 py-2">
-            {searchSuggestion.map((s) => (
-              <li
-                key={s}
-                className="bg-white px-3 py-[3px] flex align-middle items-center space-x-3 text-gray-700 hover:bg-[#f2f2f2] text-[16px]"
-              >
-                <span className="scale-[0.8]">{search}</span> <span>{s}</span>
-              </li>
-            ))}
-          </ul>
-        </div>
+        {showSuggestions && (
+          <div className="fixed ml-[16.6rem] w-[27.3%]">
+            <ul className="rounded-lg shadow-xl border-gray-300 py-2">
+              {searchSuggestion.map((s) => (
+                <li
+                  key={s}
+                  className="bg-white px-3 py-[3px] flex align-middle items-center space-x-3 text-gray-800 hover:bg-[#f2f2f2] text-[16px]"
+                >
+                  <span className="scale-[0.8]">{search}</span> <span>{s}</span>
+                </li>
+              ))}
+            </ul>
+          </div>
+        )}
       </div>
 
       {/* user profile  */}
