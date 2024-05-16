@@ -1,4 +1,4 @@
-import React from "react";
+import React, { useState } from "react";
 import logo from "../images/logo.jpg";
 import mic from "../images/mic.png";
 import hamMenu from "../images/hamMenu.png";
@@ -7,6 +7,9 @@ import { useDispatch } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 
 const Head = () => {
+  const [searchQuery, setSearchQuery] = useState("");
+  console.log(searchQuery);
+
   const dispatch = useDispatch();
   const toggleMenuHandler = () => {
     dispatch(toggleMenu());
@@ -29,6 +32,8 @@ const Head = () => {
           placeholder="Search"
           type="text"
           className="w-[40%] border border-gray-300 py-1 px-4 rounded-l-full"
+          value={searchQuery}
+          onChange={(e) => setSearchQuery(e.target.value)}
         />
         <button className="bg-gray-100 border border-gray-300 rounded-r-full py-2 px-5">
           {search}

@@ -10,7 +10,7 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
-  }, []);
+  },[]);
 
   return (
     <div className="px-4 pl-[4rem]">

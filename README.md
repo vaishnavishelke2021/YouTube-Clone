@@ -83,3 +83,18 @@ npm i react-redux
 npm i react-router-dom
 
 -->
+
+
+<!-- Debouncing : a technique used to control the frequency of a function's execution. In the context of React, it's often employed to manage input events like keystrokes or resizing, ensuring that the associated functions aren't called too frequently, preventing performance bottlenecks.
+
+typing slow = 200ms
+typing fast = 30ms
+
+Performance : 
+iphone pro max = 14 letters * 1000 = 14000 
+with debouncing = 3 API calls * 1000 = 3000 
+
+Debouncing with 200ms : 
+- if difference between 2 key stokes is <200ms : DECLINE API CALL
+- >200ms : make API CALL
+ -->
