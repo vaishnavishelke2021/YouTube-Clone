@@ -16,9 +16,9 @@ const Comment = ({ data }) => {
 };
 
 export const CommentList = ({ comments }) => {
-  return comments.map((comment) => (
-    <div className="bg-[#f6f6f6] rounded-md">
-      <Comment key={comment.id} data={comment} />
+  return comments.map((comment) => ( 
+    <div key={comment.id} className="bg-[#f6f6f6] rounded-md">
+      <Comment data={comment} />
       <div className="ml-7 border-l-2 border-gray-300">
         <CommentList comments={comment.replies} />
       </div>
