@@ -3,9 +3,10 @@ import logo from "../images/logo.jpg";
 import mic from "../images/mic.png";
 import hamMenu from "../images/hamMenu.png";
 import { headvideo, notification, search, user } from "../images/icons";
-import { useDispatch } from "react-redux";
+import { useDispatch, useSelector } from "react-redux";
 import { toggleMenu } from "../utils/appSlice";
 import { YOUTUBE_SEARCH_API } from "../utils/constants";
+import { cacheResults } from "../utils/searchSlice";
 
 const Head = () => {
   const [searchQuery, setSearchQuery] = useState("");
@@ -13,12 +14,20 @@ const Head = () => {
   const [showSuggestions, setShowSuggestions] = useState(false);
   console.log(searchQuery);
 
+  const searchCache = useSelector((store) => store.search);
+
   useEffect(() => {
     // DEBOUNCING :
     // make an API call after every request
     // but if diff bet 2 API calls is <200ms => DECLINE API call
     // else => MAKE  API CALL
-    const timer = setTimeout(() => getSearchSuggestions(), 200);
+    const timer = setTimeout(() => {
+      if (searchCache[searchQuery]) {
+        setSearchSuggestion(searchCache[searchQuery]);
+      } else {
+        getSearchSuggestions();
+      }
+    }, 200);
 
     return () => {
       clearTimeout(timer);
@@ -30,6 +39,12 @@ const Head = () => {
     const data = await fetch(YOUTUBE_SEARCH_API + searchQuery);
     const json = await data.json();
     setSearchSuggestion(json[1]);
+
+    dispatch(
+      cacheResults({
+        [searchQuery]: json[1],
+      })
+    );
   };
 
   const dispatch = useDispatch();
@@ -75,7 +90,7 @@ const Head = () => {
               {searchSuggestion.map((s) => (
                 <li
                   key={s}
-                  className="bg-white px-3 py-[3px] flex align-middle items-center space-x-3 text-gray-800 hover:bg-[#f2f2f2] text-[16px]"
+                  className="bg-white px-3 py-[3px] flex align-middle items-center space-x-3 font-semibold text-gray-800 hover:bg-[#f2f2f2] text-[16px]"
                 >
                   <span className="scale-[0.8]">{search}</span> <span>{s}</span>
                 </li>

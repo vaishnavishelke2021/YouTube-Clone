@@ -69,14 +69,13 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
 
-
 <!--
 
 > for tailwind
 npm i -D tailwindcss
 
 > for redux store
-npm i @reduxjs/toolkit 
+npm i @reduxjs/toolkit
 npm i react-redux
 
 > for routing
@@ -84,17 +83,25 @@ npm i react-router-dom
 
 -->
 
-
 <!-- Debouncing : a technique used to control the frequency of a function's execution. In the context of React, it's often employed to manage input events like keystrokes or resizing, ensuring that the associated functions aren't called too frequently, preventing performance bottlenecks.
 
 typing slow = 200ms
 typing fast = 30ms
 
-Performance : 
-iphone pro max = 14 letters * 1000 = 14000 
-with debouncing = 3 API calls * 1000 = 3000 
+Performance :
+iphone pro max = 14 letters * 1000 = 14000
+with debouncing = 3 API calls * 1000 = 3000
 
-Debouncing with 200ms : 
+Debouncing with 200ms :
 - if difference between 2 key stokes is <200ms : DECLINE API CALL
 - >200ms : make API CALL
  -->
+
+
+<!--
+TC to search in array : O(n)
+TC to search in Object : O(1)     ... using object is more optimized
+
+using new Map() class is even more optimized then searching in object :
+new MAP();
+-->
