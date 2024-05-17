@@ -2,6 +2,7 @@ import React, { useEffect } from "react";
 import { useDispatch } from "react-redux";
 import { closeMenu } from "../utils/appSlice";
 import { useSearchParams } from "react-router-dom";
+import CommentsContainer from "./CommentsContainer";
 
 const WatchPage = () => {
   const [searchParams] = useSearchParams();
@@ -10,12 +11,12 @@ const WatchPage = () => {
   const dispatch = useDispatch();
   useEffect(() => {
     dispatch(closeMenu());
-  },[]);
+  }, []);
 
   return (
     <div className="px-4 pl-[4rem]">
       <iframe
-      className="rounded-lg"
+        className="rounded-lg"
         width="940"
         height="530"
         src={"https://www.youtube.com/embed/" + searchParams.get("v")}
@@ -25,6 +26,8 @@ const WatchPage = () => {
         referrerPolicy="strict-origin-when-cross-origin"
         allowFullScreen
       ></iframe>
+
+      <CommentsContainer></CommentsContainer>
     </div>
   );
 };

@@ -1,0 +1,77 @@
+[
+  {
+    "id": 1,
+    "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTVR9V1Ix26V2s_WWWryH3FU5Qkl2yR4PL3BcUybf2cUw&s",
+    "name": "@johndoe",
+    "text": "een the industry's standard dummy ",
+    "replies": [
+      {
+        "id": 1.1,
+        "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvEgBFO75uummW3Pb2sGs7XwaGfhtHakMitQ&s",
+        "name": "@keeras",
+        "text": " survived not only five centuries,  Lorem Ipsum passage, and going throu bially unchanged.",
+        "replies": [
+          {
+            "id": 2,
+            "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxlIuUsJyxz2yczk0ErzkqcI4ECC9LvtAVDA&s",
+            "name": "@filizjemel",
+            "text": "random text. It has roots in a piece of classical  Lorem Ipsum passage, and going through the cites of Latin",
+            "replies": []
+          },
+          {
+            "id": 3.1,
+            "uimg": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGh1bWFufGVufDB8fDB8fHww",
+            "name": "@eremmaez",
+            "text": "very popular during Lorem Ipsum passage, and going through the cites of the word in",
+            "replies": [
+              {
+                "id": 2,
+                "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxlIuUsJyxz2yczk0ErzkqcI4ECC9LvtAVDA&s",
+                "name": "@filizjemel",
+                "text": "random text. It has roots in a piece of classical  Lorem Ipsum passage, and going through the cites of Latin",
+                "replies": []
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 1.2,
+        "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRGQyOQDjm2-aC_7kUdSUILO16aBZkGMdaEmA&s",
+        "name": "@sabas",
+        "text": "desktop publishing software like Aldus ",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "id": 2,
+    "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcRxlIuUsJyxz2yczk0ErzkqcI4ECC9LvtAVDA&s",
+    "name": "@filizjemel",
+    "text": "random text. It has roots in a piece of classical  Lorem Ipsum passage, and going through the cites of Latin",
+    "replies": []
+  },
+  {
+    "id": 3,
+    "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQLDPzPseY3-Ttni4fMQQlpwqlFNhBg2WQ0oA&s",
+    "name": "@tulesem",
+    "text": "from a Lorem Ipsum passage, and going",
+    "replies": [
+      {
+        "id": 3.1,
+        "uimg": "https://images.unsplash.com/photo-1438761681033-6461ffad8d80?q=80&w=1000&auto=format&fit=crop&ixlib=rb-4.0.3&ixid=M3wxMjA3fDB8MHxzZWFyY2h8MTl8fGh1bWFufGVufDB8fDB8fHww",
+        "name": "@eremmaez",
+        "text": "very popular during Lorem Ipsum passage, and going through the cites of the word in",
+        "replies": []
+      }
+    ]
+  },
+  {
+    "id": 4,
+    "uimg": "https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQvEgBFO75uummW3Pb2sGs7XwaGfhtHakMitQ&s",
+    "name": "@sarkan",
+    "text": " The first line of Lorem",
+    "replies": [
+    ]
+  }
+]
